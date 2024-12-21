@@ -51,6 +51,11 @@ git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
 # git clone --depth=1 -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 # git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
+# docker
+git clone --depth=1 https://github.com/kenzok8/small-package/luci-app-dockerman package/luci-app-dockerman
+git clone --depth=1 https://github.com/kenzok8/small-package/docker package/docker
+git clone --depth=1 https://github.com/kenzok8/small-package/dockerd package/dockerd
+
 # msd_lite
 # git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
 # git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
