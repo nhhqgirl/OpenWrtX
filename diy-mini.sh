@@ -46,7 +46,7 @@ git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-app-opencla
 # git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
 
 # 1222+
-# git clone --depth=1 -b 23 https://github.com/gxnas/OpenWrt_Build_x64_Packages/luci-theme-argone package/luci-theme-argon
+git clone --depth=1 -b 23 https://github.com/gxnas/OpenWrt_Build_x64_Packages/luci-theme-argone package/luci-theme-argone
 
 # 更改 Argon 主题背景
 # cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
