@@ -58,8 +58,8 @@ git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-app-opencla
 
 # docker
 # git clone --depth=1 https://github.com/kenzok8/small-package/luci-app-dockerman package/luci-app-dockerman
-# git clone --depth=1 https://github.com/kenzok8/small-package/docker package/docker
-# git clone --depth=1 https://github.com/kenzok8/small-package/dockerd package/dockerd
+git clone --depth=1 https://github.com/kenzok8/small-package/docker package/docker
+git clone --depth=1 https://github.com/kenzok8/small-package/dockerd package/dockerd
 # 1222+
 git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-app-docker package/luci-app-docker
 git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-lib-docker package/luci-lib-docker
