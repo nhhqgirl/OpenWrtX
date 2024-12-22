@@ -46,6 +46,7 @@ git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-app-opencla
 # git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
 # 1222+
 git clone --depth=1 https://github.com/xianfanjie/luci-theme-argon.git package/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 
 # 修改默认主题
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
