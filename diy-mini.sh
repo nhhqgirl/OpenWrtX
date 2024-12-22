@@ -34,14 +34,19 @@ git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/l
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2 package/luci-app-passwall2
-git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+# git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+# 1222+
+git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-app-openclash package/luci-app-openclash
 
 # Themes
-git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
-git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
+# git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
+# git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+# git clone --depth=1 https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/luci-theme-infinityfreedom
+# git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
+
+# 1222+
+git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-theme-argon-2102 package/luci-theme-argon
 
 # 更改 Argon 主题背景
 # cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
@@ -52,9 +57,13 @@ git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
 # git clone --depth=1 https://github.com/pymumu/openwrt-smartdns package/smartdns
 
 # docker
-git clone --depth=1 https://github.com/kenzok8/small-package/luci-app-dockerman package/luci-app-dockerman
-git clone --depth=1 https://github.com/kenzok8/small-package/docker package/docker
-git clone --depth=1 https://github.com/kenzok8/small-package/dockerd package/dockerd
+# git clone --depth=1 https://github.com/kenzok8/small-package/luci-app-dockerman package/luci-app-dockerman
+# git clone --depth=1 https://github.com/kenzok8/small-package/docker package/docker
+# git clone --depth=1 https://github.com/kenzok8/small-package/dockerd package/dockerd
+# 1222+
+git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-app-docker package/luci-app-docker
+git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-lib-docker package/luci-lib-docker
+
 
 # msd_lite
 # git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-app-msd_lite
@@ -97,7 +106,7 @@ find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_U
 find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_URL:=@GHCODELOAD/PKG_SOURCE_URL:=https:\/\/codeload.github.com/g' {}
 
 # 取消主题默认设置
-find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/set luci.main.mediaurlbase/d' {} \;
+# find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/set luci.main.mediaurlbase/d' {} \;
 
 # 调整 Docker 到 服务 菜单
 # sed -i 's/"admin"/"admin", "services"/g' feeds/luci/applications/luci-app-dockerman/luasrc/controller/*.lua
