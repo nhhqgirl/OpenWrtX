@@ -13,8 +13,8 @@ sed -i 's/192.168.1.1/192.168.81.1/g' package/base-files/luci2/bin/config_genera
 # 移除要替换的包
 rm -rf feeds/packages/lang/golang
 rm -rf feeds/packages/net/mosdns
-rm -rf feeds/packages/net/msd_lite
-rm -rf feeds/packages/net/smartdns
+# rm -rf feeds/packages/net/msd_lite
+# rm -rf feeds/packages/net/smartdns
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/luci/applications/luci-app-netdata
@@ -46,7 +46,7 @@ git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-app-opencla
 # git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
 
 # 1222+
-git clone --depth=1 https://github.com/NueXini/NueXini_Packages/luci-theme-argon-2102 package/luci-theme-argon
+# git clone --depth=1 -b 23 https://github.com/gxnas/OpenWrt_Build_x64_Packages/luci-theme-argone package/luci-theme-argon
 
 # 更改 Argon 主题背景
 # cp -f $GITHUB_WORKSPACE/images/bg1.jpg package/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg
